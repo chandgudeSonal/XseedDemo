@@ -1,11 +1,14 @@
-import { Component } from '@angular/core';
-import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
+// import { Component } from '@angular/core';
+// import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
 import { NavBarService } from '../nav-bar.service';
+import { Component } from '@angular/core';
+import { FormGroup,FormControl,FormBuilder } from '@angular/forms';
 @Component({
   selector: 'app-schedule-meet',
   templateUrl: './schedule-meet.component.html',
   styleUrls: ['./schedule-meet.component.scss']
 })
+
 export class ScheduleMeetComponent {
   MeetingSlots: string[] = ['15:35:10','16:40:10'];
 res:any=[]
