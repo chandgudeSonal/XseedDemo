@@ -1,0 +1,29 @@
+<div cdkDropListGroup>
+    <div class="example-container">
+      <h2>Available Componets</h2>
+  
+      <div
+        cdkDropList
+        [cdkDropListData]="componentOptions"
+        class="example-list"
+        cdkDropListSortingDisabled
+        (cdkDropListDropped)="drop($event)">
+        <div class="example-box" *ngFor="let item of componentOptions" cdkDrag>{{item}}</div>
+      </div>
+    </div>
+  
+    <div class="example-container">
+      <h2>Customise Your WorkFlow</h2>
+  
+      <div
+        cdkDropList
+        [cdkDropListData]="defaultComponent"
+        class="example-list"
+        (cdkDropListDropped)="drop($event)">
+        <div class="example-box" *ngFor="let item of defaultComponent" cdkDrag>{{item}}</div>
+      </div>
+    </div>
+    <div>
+        <button  mat-raised-button color="accent"  (click)="goToNavBar()">Confirm your workFlow</button>
+        </div>
+  </div>
