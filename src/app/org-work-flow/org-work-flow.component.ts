@@ -29,9 +29,7 @@ export class OrgWorkFlowComponent implements OnInit {
     //   console.log(event)
 
     //  }
-    // if (event.previousIndex === event.currentIndex) {
-    //   this.service.setDefaultWorkflow(this.defaultComponent);
-    // }
+   
      if (event.previousContainer === event.container) {
       moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
       this.service.setDefaultWorkflow(this.defaultComponent);
