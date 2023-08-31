@@ -1,0 +1,45 @@
+<div>
+    <form [formGroup]="JobForm">
+        <mat-label>
+            <strong>Meeting Title</strong>
+          </mat-label>
+          <br>
+        <mat-form-field>
+            <input matInput formControlName="Title" />
+        </mat-form-field>
+<br>
+        <mat-form-field appearance="outline">
+            <mat-label>Choose a date</mat-label>
+            <input formControlName="InterviewDate" matInput [matDatepicker]="picker">
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+        
+        <br>   
+        <mat-form-field>
+            <mat-label>Select Meeting Time</mat-label>
+            <mat-select [(value)]="selectedSlot" formControlName="MeetingSlots">
+              <mat-option *ngFor="let slot of MeetingSlots" [value]="slot">{{slot}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+<br>
+        <mat-label>
+            <strong>Enter Interviwer Email</strong>
+          </mat-label>
+          <br>
+        <mat-form-field>
+            <input type='email' matInput formControlName="InterviwerEmail" />
+        </mat-form-field>
+<br>
+        <mat-label>
+            <strong>Enter Candidate Email</strong>
+          </mat-label>
+          <br>
+        <mat-form-field>
+            <input type="email" matInput formControlName="CandidateEmail" />
+        </mat-form-field>
+        <button mat-raised-button color="accent" (click)="onSubmit()">Submit Meetings</button>
+
+    </form>
+</div>
